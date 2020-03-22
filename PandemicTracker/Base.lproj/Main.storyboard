@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="ntk-JU-mse">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -10,20 +9,82 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Simple_Universal_Webview_App" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController interfaceStyle="dark" id="BYZ-38-t0r" customClass="ViewController" customModule="PandemicTracker" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fc7-gT-S0s"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="34" y="31"/>
+            <point key="canvasLocation" x="952" y="35"/>
+        </scene>
+        <!--Advices View Controller-->
+        <scene sceneID="Sn0-JG-tHJ">
+            <objects>
+                <viewController interfaceStyle="dark" id="ntk-JU-mse" customClass="AdvicesViewController" customModule="PandemicTracker" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="yNi-Cw-BAI"/>
+                        <viewControllerLayoutGuide type="bottom" id="kOu-Hz-xQQ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OQj-bY-X5D">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mzL-9M-1Tt">
+                                <rect key="frame" x="131" y="581" width="113" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Open tracker"/>
+                                <connections>
+                                    <segue destination="BYZ-38-t0r" kind="show" id="HBT-bX-HHe"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dv4-OL-hrF">
+                                <rect key="frame" x="16" y="60" width="343" height="90"/>
+                                <string key="text">Basic protective measures against the new coronavirus
+</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WtL-nm-Z0m">
+                                <rect key="frame" x="32" y="230" width="311" height="286.5"/>
+                                <string key="text">🔴 Wash your hands frequently
+
+🔴 Maintain social distancing
+
+🔴 Avoid touching eyes, nose                and mouth
+
+🔴 Practice respiratory hygiene
+
+🔴 Stay informed and follow       advice given by your       healthcare provider</string>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="dv4-OL-hrF" firstAttribute="leading" secondItem="OQj-bY-X5D" secondAttribute="leading" constant="16" id="R74-6i-FkJ"/>
+                            <constraint firstItem="kOu-Hz-xQQ" firstAttribute="top" secondItem="mzL-9M-1Tt" secondAttribute="bottom" constant="50" id="SVt-zk-fwg"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="WtL-nm-Z0m" secondAttribute="trailing" constant="16" id="ULo-Cm-TZ4"/>
+                            <constraint firstItem="WtL-nm-Z0m" firstAttribute="leading" secondItem="OQj-bY-X5D" secondAttribute="leadingMargin" constant="16" id="XRQ-Pq-alZ"/>
+                            <constraint firstAttribute="trailing" secondItem="dv4-OL-hrF" secondAttribute="trailing" constant="16" id="jw9-1G-b9J"/>
+                            <constraint firstItem="mzL-9M-1Tt" firstAttribute="centerX" secondItem="OQj-bY-X5D" secondAttribute="centerX" id="pYw-Jm-cJq"/>
+                            <constraint firstItem="WtL-nm-Z0m" firstAttribute="top" secondItem="dv4-OL-hrF" secondAttribute="bottom" constant="80" id="shF-BY-kb7"/>
+                            <constraint firstItem="dv4-OL-hrF" firstAttribute="top" secondItem="yNi-Cw-BAI" secondAttribute="bottom" constant="60" id="xmn-1S-aez"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vJP-l6-eJA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-26.086956521739133" y="34.821428571428569"/>
         </scene>
     </scenes>
 </document>
